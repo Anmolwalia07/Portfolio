@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { UserProvider } from "./Context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   description: "My Portfolio Website....",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,12 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <UserProvider>
+        <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         cz-shortcut-listen="true"
       >
         {children}
       </body>
+      </UserProvider>
     </html>
   );
 }

@@ -46,9 +46,8 @@ export default function ProjectsPage() {
       setTechs([]);
       setLiveLink("");
       setGitHubLink("");
-    } catch (err: any) {
-      console.log(err)
-      setMessage(`❌ Error: ${err.message}`);
+    } catch (err) {
+      setMessage(`❌ Error: ${err}`);
     }
   };
 

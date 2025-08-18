@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     const skill = await Skills.create({ name ,userId});
 
-    const updatedUser = await User.findByIdAndUpdate(
+    await User.findByIdAndUpdate(
       userId,
       { $push: { skills: skill._id } },
       { new: true }
@@ -36,10 +36,9 @@ export async function POST(req: NextRequest) {
       { status: 200 }
     );
 
-  } catch (error: any) {
-    console.error(error);
+  } catch (error) {
     return NextResponse.json(
-      { error: error.message || "Something went wrong" },
+      { error: "Something went wrong" },
       { status: 500 }
     );
   }

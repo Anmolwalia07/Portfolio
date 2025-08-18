@@ -1,5 +1,5 @@
 import {db} from "@/db/db";
-import { IUser, User } from "@/models/model";
+import { User } from "@/models/model";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -15,8 +15,8 @@ export async function GET() {
       });
 
     return NextResponse.json({ users }, { status: 200 });
-  } catch (error: any) {
-    return new NextResponse(JSON.stringify({ error: error.message }), {
+  } catch (error) {
+    return new NextResponse(JSON.stringify({ error: "Internal Server error" }), {
       status: 500,
     });
   }

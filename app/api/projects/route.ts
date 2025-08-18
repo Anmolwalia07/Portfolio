@@ -11,8 +11,8 @@ export async function GET() {
       .populate("technologies")
 
     return NextResponse.json({ projects }, { status: 200 });
-  } catch (error: any) {
-    return new NextResponse(JSON.stringify({ error: error.message }), {
+  } catch (error) {
+    return new NextResponse(JSON.stringify({ error: "Internal Server error" }), {
       status: 500,
     });
   }
@@ -56,8 +56,7 @@ export async function POST(req: NextRequest) {
       { message: "Project created successfully", project },
       { status: 200 }
     );
-  } catch (error: any) {
-    console.log(error)
-    return new NextResponse(JSON.stringify({ error: error.message }), { status: 500 });
+  } catch (error) {
+    return new NextResponse(JSON.stringify({ error: "Internal Server error" }), { status: 500 });
   }
 }

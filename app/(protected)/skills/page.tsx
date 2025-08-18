@@ -23,8 +23,8 @@ export default function SkillsPage() {
 
       setMessage(`Skill "${res.data.name}" uploaded successfully!`);
       setName("");
-    } catch (err: any) {
-      setMessage(` Error: ${err.message}`);
+    } catch (err) {
+      setMessage(` Error: ${err}`);
     }
   };
 

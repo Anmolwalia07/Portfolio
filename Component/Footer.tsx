@@ -20,7 +20,9 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/Anmolwalia07"
+              target="_blank"             
+              className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <div className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +30,9 @@ const Footer = () => {
                   </svg>
                 </div>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/anmoldeep07" 
+              target="_blank"
+              className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <div className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -36,14 +40,17 @@ const Footer = () => {
                   </svg>
                 </div>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                <div className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </div>
-              </a>
+              <a href="mailto:anmolwalia025@gmail.com" 
+               target="_blank"
+              className="text-gray-400 hover:text-white transition-colors">
+              <span className="sr-only">Email</span>
+              <div className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V8.489l8 5.333 8-5.333V18H4z"/>
+                </svg>
+              </div>
+            </a>
+
             </div>
           </motion.div>
           

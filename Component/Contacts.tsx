@@ -1,4 +1,5 @@
 "use client"
+import axios from "axios";
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaPaperPlane } from "react-icons/fa";
 
@@ -23,10 +24,11 @@ const Contact = () => {
     setStatus(null);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Form submitted:", formData);
-
-      setStatus("success");
+   
+      const response=await axios.post('/api/contact',formData);
+      if(response.status){
+        setStatus('success')
+      }
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       setStatus("error");
@@ -109,7 +111,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors disabled:opacity-70"
+            className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {loading ? "Sending..." : "Send Message"}
             <FaPaperPlane />

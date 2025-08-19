@@ -21,7 +21,7 @@ const Projects = () => {
             [...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="bg-black rounded-xl overflow-hidden shadow-lg border border-blue-600 shadow-blue-500 animate-pulse"
+                className="bg-black rounded-xl overflow-hidden hover:shadow-lg border border-white hover:border-blue-600 hover:shadow-blue-500 animate-pulse"
               >
                 <div className="h-40 w-full bg-gray-700"></div>
                 <div className="p-6">
@@ -39,7 +39,7 @@ const Projects = () => {
             ctx.user.projects.map((project) => (
               <div
                 key={project._id}
-                className="bg-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition transform border border-blue-600 shadow-blue-500"
+                className="bg-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition transform border border-white hover:border-blue-600 hover:shadow-blue-500"
               >
                 <h3 className="text-2xl font-bold mb-2 text-white p-2 pl-3">
                   {project.title.split(" ")[0]}

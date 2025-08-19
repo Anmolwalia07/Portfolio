@@ -53,7 +53,6 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
    useEffect(() => {
    axios.get('/api/user').then((res)=>{
     setUser(res.data.users);
-    console.log(res.data)
    }).catch(err=>{
     console.log(err)
    })

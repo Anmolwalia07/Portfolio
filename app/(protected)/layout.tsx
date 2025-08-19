@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true); // 👈 state
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     const token = localStorage.getItem("password");
